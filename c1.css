@@ -1,0 +1,35 @@
+ul {
+    list-style:none;
+color:red;
+}
+
+#menu {
+    float:left;
+    vertical-align:middle;
+    display:block;
+    width:600px;
+    height:108px;
+}
+
+#menu li {
+    display:inline;
+    font-size:20px;
+    padding:0px;
+}
+
+#menu a:link {
+    color:white;
+    font-weight:bold;
+    padding:20px;
+    background-color:#27A285;
+}
+
+#menu a:hover {
+    background-color:#E1C618;
+    color:brown;
+}
+
+hr {
+    height:5px;
+    background-color:red;
+}

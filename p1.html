@@ -1,0 +1,77 @@
+<html>
+<head>
+    <title> navigation bar </title>
+    <link rel="stylesheet" type="text/css" href="menu.css">
+    <style>
+        ul {
+    list-style:none;
+color:red;
+}
+nav {
+    background:black;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+#menu {
+    float:left;
+    vertical-align:middle;
+    display:block;
+    width:600px;
+    height:108px;
+}
+
+#menu li {
+    display:inline;
+    font-size:20px;
+    padding:0px;
+}
+
+#menu a:link {
+    color:white;
+    font-weight:bold;
+    padding:20px;
+    background-color:#27A285;
+}
+
+#menu a:hover {
+    background-color:#E1C618;
+    color:brown;
+}
+
+hr {
+    height:5px;
+    background-color:red;
+}
+    </style>
+</head>
+<body>
+    <ul id="menu">
+        <li id="menu1">
+            <a href="http://www.google.com">
+                <span>GOOGLE</span>
+            </a>
+        </li>
+        <li id="menu2">
+            <a href="http://www.github.com">
+                <span>GITHUB</span>
+            </a>
+        </li>
+        <li id="menu3">
+            <a href="http://www.quora.com">
+                <span>QUORA</span>
+            </a>
+        </li>
+        <li id="menu4">
+            <a href="http://www.facebook.com">
+                <span>FACEBOOK</span>
+            </a>
+        </li>
+    </ul>
+    <hr/>
+</body>
+</html>

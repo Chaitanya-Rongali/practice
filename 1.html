@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 500px;
+            height:10px;
+            background-color:yellow;
+            padding:20px;
+            text-align: center;
+        }
+        #mybtn{
+            background-color: red;
+            color:black;
+            text-align: center;
+        }
+    </style>
+    
+</head>
+<body>
+    <!-- <h1>hello</h1>
+    <p>haiiiiiiiiiii</p>
+    <button style="color:red">click</button>
+    <button id="id" onclick="myfunction(this)">click me to change</button><br>
+     Enter your name:    <input type="text" id="fname" value="please eneter" oninput="uppercase()"> <br>
+     <div class="box" onmouseover="onmover(this)" onmouseout="onmout(this)">
+
+     </div >  -->
+     <button id="mybtn">check</button>
+     <label for="tableSelect">select a table:
+
+     </label>
+     <select id="tableSelect">
+        <option value="">choose a table</option>
+        <option value="a">a</option>
+        <option value="b">b</option>
+        <option value="c">c</option>
+
+     </select>
+     <button id="mybtnc">click</button>
+     
+6
+     
+     
+     <script>
+        // function uppercase(){
+        //     const imp=document.getElementById("fname");
+        //     imp.value=imp.value.toUpperCase();
+        // }
+        // function onmover(obj){
+        //     obj.innerHTML='eneter your name';
+        //     obj.style.backgroundcolor="red"
+
+        // }
+        // function onmout(obj){
+        //     obj.innerHTML="welcome";
+        // }
+       var x=document.getElementById("mybtn");
+       x.addEventListener("click",myFunction);
+       x.addEventListener("click",myextraFunction);
+       function myFunction(){
+        alert("HAIIII");
+       }
+       function myextraFunction(){
+        alert("are you ok!");
+       }
+       let numb=parseInt(prompt("enter a number:"))
+if(numb%2==0){
+    console.log("number is even number")
+}
+else{
+    console.log("number is odd")
+
+}
+document.getElementById("mybtnc").addEventListener("click",function(){
+    alert("check once")
+
+})
+     </script>
+</body>
+</html>

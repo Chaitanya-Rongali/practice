@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <from id="form">
+        
+        <input type="text" id="user" placeholder="eneter a username"  /><br>
+        
+        <input type="email" id="email" placeholder="enter your email" /><br>    
+      <button type="submit">submit</button>
+        <!-- <button id="btn">login</button>
+        <button id="lgob">logout</button>
+        <button id="nxt">next</button> -->
+        <ul>
+            <li class="man">mango</li>
+            <li class="ora">orange</li>
+            <li class="ban">bannana</li>
+            <li class="gra">grapes</li>
+        </ul>
+    </from>
+    <button class="minus"></button><span clas="number">1</span><button class="plus"></button>
+    
+    <script>
+        var form=document.getElementById('form')
+        form.addEventListener("submit",function(event){
+            event.preventDefault()
+            var username=document.getElementById("user").value
+            console.log(username) ;
+            var emailname=document.getElementById("email").value
+            console.log(emailname);
+        }) 
+        let button=document.getElementById("btn")
+        button.addEventListener("click",dosomething)
+        function dosomething(){
+            alert("hello")
+        }
+        var logob=document.getElementById("lgob")
+        logob.addEventListener("click",myfunction)
+        function myfunction(){
+            alert("really you want to logout")
+        }
+        var nexta=document.getElementById("nxt")
+        nexta.addEventListener("click",pagenext)
+        function pagenext(){
+            alert("change to page")
+        }
+        // let fruit=document.querySelectorAll("li");
+        // for(x=0;x< fruit.length;x++){
+        //     fruit[x].textContent="pineapple";
+
+        // }
+        let fruit = document.querySelectorAll('li'); 
+
+for (let x = 0; x < fruit.length; x++) {
+    fruit[x].textContent = "pineapple";
+}
+const plus = document.querySelector('.plus_minus'),minus = document.querySelector('.minus_plus');
+
+let number = parseInt(document.querySelector('.number'));
+
+plus.addEventListener('click',() => {number++ ;});
+
+minus.addEventListener('click',() => {number--;
+
+});
+        
+    
+    </script>
+</body>
+
+</html>

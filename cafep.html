@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url("1.webp") ;
+            height: 100vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+            text-align:center;
+            padding:0;
+            margin:0;
+            
+           
+            
+            
+        }
+        nav{background-color:black;
+            padding:10px;
+            display:flex;
+            justify-content: space-around;
+            align-items:center;
+            color:white;
+            font-size:20px;
+            font-weight:bold;
+
+        }
+        nav a{
+            text-decoration: none;
+            padding:10px 10px;
+            color:white;
+        }
+        nav a:hover{
+            background-color: coral;
+            
+
+        }
+        .order_inf, .home_inf, .contact-inf, .about-inf{
+            width: 100%;
+            max-width: 540px;
+            margin: 100px auto 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(238, 236, 236, 0.1);
+            display: none;
+        }
+        .home-info img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .item-list {
+        
+            list-style: none;
+            padding: 0;
+        }
+        .item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        button {
+            cursor: pointer;
+            padding: 5px 10px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+        .add-btn { background: #28a745; color: white; }
+        .del-btn { background: #dc3545; color: white; }
+        .quantity-btn { background: #ffc107; color: black; }
+        .submit-btn { background: #007bff; color: white; padding: 10px 20px; margin-top: 20px; }
+        .summary-container {
+            margin-top: 20px;
+            padding: 10px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#" onclick="showhome()" >Home</a>
+        <a href="#" Onclick="showorder()">Order</a>
+        <a href="#" onclick="showabout()">About</a>
+        <a href="#" onclcick="showcontct()">Contact</a>
+
+    </nav>
+    <h1 style="color:red"><b>MAWA'S CAFE</b></h1>
+    <div class="home_inf" id="home">
+        <img src="cofeee.jpg" alt="cafe_homeimg">
+    </div>
+    <div class="about_inf" id="about">
+        <h2><b>About us:</b></h2>
+        <P>Adress: MAWA'S CAFE,R.K BEACH ROAD,VISKHAPATANAM,ANDHRAPRADESH</P>
+
+    </div>
+    <div class="order_inf" id="order"></div>
+
+    <label for="tableselect"><b>Select a table</b></label>
+    <select id="tableselect">
+        <option value="">select a table</option>
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+        <option value="E">E</option>
+        <option value="F">F</option>
+        <option value="G">G</option>
+        <option value="H">H</option>
+        <option value="I">I</option>
+
+
+    </select>
+    <br><br>
+    <select id="foodItem">
+        <option value="">Select an item</option>
+        <option value="Espresso">Espresso</option>
+        <option value="Americano">Americano</option>
+        <option value="Cappuccino">Cappuccino</option>
+        <option value="Latte">Latte</option>
+        <option value="Mocha">Mocha</option>
+        <option value="Masala Chai">Masala Chai</option>
+        <option value="Green Tea">Green Tea</option>
+        <option value="Croissant">Croissant</option>
+        <option value="Muffin">Muffin</option>
+        <option value="Grilled Cheese Sandwich">Grilled Cheese Sandwich</option>
+        <option value="Chocolate Truffles">Chocolate Truffles</option>
+        <option value="Pate de Fruits">Pate de Fruits</option>
+        <option value="Florentine Cookie">Florentine Cookie</option>
+        <option value="Chocolate & French Biscuit">Chocolate & French Biscuit</option>    
+
+    </select>
+    <button class="add-btn" onclick="addItem()">Add</button>
+    <ul class="item-list" id="itemList"></ul>
+    <button class="submit-btn" onclick="submitOrder()">Submit Order</button>
+</div>
+<div class="summary-container" id="summaryContainer" style="display:none; background-color: #28a745;">
+    <h2>Order Summary</h2>
+    <ul id="summaryList"></ul>
+    </div>
+    <div class="contact-inf" id="contact">
+        <h2>Contact Us</h2>
+        <p>Phone: +91-00000-000000</p>
+        <p>Email:mawascafe@6302.com</p>
+    </div>
+    <script>
+        function showhome(){
+            document.getElementById("home").style.display='block';
+            document.getElementById("order").style.display='none';
+            document.getElementById("about").style.display='none';
+            document.getElementById("contact").style.display='none';
+        }
+        function showorder(){
+            document.getElementById("home").style.display='none';
+            document.getElementById('order').style.display='block';
+            document.getElementById("about").style.display='none';
+            document.getElementById("contact").style.display='none';
+        }
+        function showabout(){
+            document.getElementById("home").style.display='none';
+            document.getElementById('order').style.display='none';
+            document.getElementById("about").style.display='block';
+            document.getElementById("contact").style.display='none';
+        }
+        function showcontact(){
+            document.getElementById("home").style.display='none';
+            document.getElementById('order').style.display='none';
+            document.getElementById("about").style.display='none';
+            document.getElementById("contact").style.display='block';
+        }
+        function addItem() {
+            const table = document.getElementById('tableSelect').value;
+            const item = document.getElementById('foodItem').value;
+            if (table && item) {
+                const listItem = document.createElement('li');
+                listItem.className = 'item';
+                listItem.innerHTML = `${item} (Table: ${table}) <button class='quantity-btn' onclick='changeQuantity(this, -1)'>-</button> <span>1</span> <button class='quantity-btn' onclick='changeQuantity(this, 1)'>+</button> <button class='del-btn' onclick='removeItem(this)'>Delete</button>`;
+                document.getElementById('itemList').appendChild(listItem);
+            } else {
+                alert('Please select a table and item.');
+            }
+        }
+        function changeQuantity(button, amount) {
+            const quantitySpan = button.parentElement.querySelector('span');
+            let quantity = parseInt(quantitySpan.textContent);
+            quantity = Math.max(1, quantity + amount);
+            quantitySpan.textContent = quantity;
+        }
+        function removeItem(button) {
+            button.parentElement.remove();
+        }
+        function submitOrder() {
+            const items = document.querySelectorAll('.item');
+            const summaryList = document.getElementById('summaryList');
+            summaryList.innerHTML = '';
+            items.forEach(item => {
+                const text = item.textContent.replace('Delete', '').trim();
+                const listItem = document.createElement('li');
+                listItem.textContent = text;
+                summaryList.appendChild(listItem);
+            });
+            document.getElementById('summaryContainer').style.display = 'block';
+        }
+        
+
+    </script>
+
+
+   
+
+</body>
+</html>

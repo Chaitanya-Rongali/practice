@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cafe's</title>
+    <link rel="stylesheet" href="cafe.css">
+</head>
+<body>
+    <nav>
+        <a href="#" onclick="showhome()">Home</a>
+        <a href="#" onclick="showorder()">Order</a>
+        <a href="#" onclick="showabout()">About</a>
+        <a href="#" onclick="showcontact()">Contact</a>
+    </nav>
+    <h1 style="color:red"><b>MAWA'S CAFE</b></h1>
+    <div class="home-info" id="homeSection">
+        <img src="cofeee.jpg" alt="Cafe Image">
+    </div>
+    <div class="about-info" id="aboutSection">
+        <h2>About Us</h2>
+        <p>Address: Mawa's Cafe, R.K beach road,viskhapatanam,AndhraPradesh, India</p>
+    </div>
+    <div class="container" id="orderSection">
+        <label for="tablselect">Select Table:</label>
+        <select id="tableselect">
+             <option value="">Select Table</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="E">E</option>
+            <option value="F">F</option>
+            <option value="G">G</option>
+            <option value="H">H</option>
+            <option value="I">I</option>
+            <option value="J">J</option>
+            <option value="K">K</option>
+            <option value="L">L</option>
+        </select>
+        <br><br>
+        <select id="fooditem">
+            <option value="">Select an item</option>
+            <option value="Espresso">Espresso</option>
+            <option value="Americano">Americano</option>
+            <option value="Cappuccino">Cappuccino</option>
+            <option value="Latte">Latte</option>
+            <option value="Mocha">Mocha</option>
+            <option value="Masala Chai">Masala Chai</option>
+            <option value="Green Tea">Green Tea</option>
+            <option value="Croissant">Croissant</option>
+            <option value="Muffin">Muffin</option>
+            <option value="Grilled Cheese Sandwich">Grilled Cheese Sandwich</option>
+            <option value="Chocolate Truffles">Chocolate Truffles</option>
+            <option value="Pate de Fruits">Pate de Fruits</option>
+            <option value="Florentine Cookie">Florentine Cookie</option>
+            <option value="Chocolate & French Biscuit">Chocolate & French Biscuit</option>    
+        </select>
+        <button class="addbtn" onclick="additem()">Add</button>
+        <ul class="item-list" id="itemList"></ul>
+        <button class="submitbtn" onclick="submitorder()">Submit Order</button>
+    </div>
+    <div class="summary-container" id="summaryContainer" style="display: none;">
+        <h2>Order Summary</h2>
+        <ul id="summaryList"></ul>
+    </div>
+    <div class="contact-info" id="contactSection">
+        <h2>Contact Us:</h2>
+        <p>Phone: +91-6309808374</p>
+        <p>Email: chaitanyakumar6302@gmail.com</p>
+    </div>
+    <script src="cafe.js"></script>    
+</body>
+</html>

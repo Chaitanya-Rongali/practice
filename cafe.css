@@ -1,0 +1,79 @@
+body {
+        
+    text-align: center;
+    background: url('1.webp') ;
+    background-repeat: no-repeat;
+    padding: 0;
+    background-size: cover;
+    height:100vh;
+}
+
+
+
+nav {
+    background:black;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+nav a:hover {
+    background-color: orange;
+    border-radius: 5px;
+}
+.container, .home-info, .contact-info, .about-info {
+    width: 50%;
+    margin: 100px auto 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    display: none;
+}.home-info img {
+    width: 100%;
+    border-radius: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:100vh;
+    padding:0;
+}
+.item-list {
+
+    list-style: none;
+    padding: 0;
+}
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+button {
+    cursor: pointer;
+    padding: 5px 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+}
+.addbtn { background: green; color: white; }
+.delbtn { background:red; color: white; }
+.quantitybtn { background: #ffc800; color: black; }
+.submitbtn { background: #007bff; color: white; padding: 10px 20px; margin-top: 20px; }
+.summary-container {
+            margin-top: 20px;
+            padding: 10px;
+            background: cornsilk;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(210, 11, 11, 0.1);
+        }
+
