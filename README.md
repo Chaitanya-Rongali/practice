@@ -10,6 +10,8 @@
 <tr>
 <th>row1</th>
 <th>row2</th>
+<td>chaitanya</td>
+<td>kumar</td>
 </tr>
 </table>
 
