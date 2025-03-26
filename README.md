@@ -8,8 +8,8 @@
 <p>the project is nice and it used for the man parctise</p>
 <table>
 <tr>
-<td>row1</td>
-<td>row2</td>
+<th>row1</th>
+<th>row2</th>
 </tr>
 </table>
 
