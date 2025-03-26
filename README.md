@@ -18,8 +18,8 @@
 
 ~~striked~~
 
---[]html
+-[]html
 
---[x]css
+-[x]css
 
 
